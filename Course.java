@@ -23,7 +23,7 @@ public class Course {
         return (obj instanceof Course) && (((Course)obj).code).equals(this.code);
     }
     public String getCode() {
-        return code;
+        return code; //comment
     }
 
 }
