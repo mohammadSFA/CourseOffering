@@ -30,7 +30,7 @@ public class App extends Application {
         Course c1 = new Course("IAS212");
 
         Section [] availablSection = new Section[2];
-        availablSection[0] = new Section(c0,11111,"01","56-212","UT","0800-0850");
+        availablSection[0] = new Section(c0,11111,"01","56-212","UT","0800-0850", "HAMZA SHAIKHI");
         availablSection[1] = new Section(c1);
 
 
@@ -110,8 +110,6 @@ public class App extends Application {
     }
     public static void main(String[] args) {
         launch();
-            
-
         }
 
 

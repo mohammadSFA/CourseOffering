@@ -57,5 +57,6 @@ public class Section {
 
         Label instructor = new Label(instructor);
         Label endTime = new Label(time.substring(6));
+        
     }
 }

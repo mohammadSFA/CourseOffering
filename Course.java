@@ -5,9 +5,14 @@ public class Course {
     private int creditH;
     private ArrayList<Course> preRequisite;
     private ArrayList<Course> coRequisite;
+
+    // Constructor to add a course that has no pre or corequesites
     public Course(String code){
         this.code = code;
+        //this.creditH = creditH;
     }
+
+    // Constructor to add a course with co and/or prerequisites
     public Course(String code,int creditH, ArrayList<Course> preReq, ArrayList<Course> coReq ){
         this.coRequisite = (coReq);
         this.creditH = creditH;this.code = code;this.preRequisite = preReq;
