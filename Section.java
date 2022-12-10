@@ -24,7 +24,7 @@ public class Section {
     }
     @Override
     public String toString() {
-        return course.getCode()+" "+sectionNum+"        "+ crn +"      "+location+"        "+ days +"      "+time;
+        return course.getCode()+"-"+sectionNum+"/"+ crn +"/"+course.getTitle()+"/"+instructor+"/"+location+"/"+ days +"/"+time;
     }
 
     public String getTime() {
@@ -51,12 +51,4 @@ public class Section {
         return dayConflict && timeConflict;
     }
 
-    public VBox toVBox() {
-        Label info = new Label(course + "-" + sectionNum + "@" + location);
-        Label startTime = new Label(time.substring(0,5));
-
-        Label instructor = new Label(instructor);
-        Label endTime = new Label(time.substring(6));
-        
-    }
 }

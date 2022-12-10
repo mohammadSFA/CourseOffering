@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 public class Course {
+    // Instance Variables
     private String code;
+    private String title;
     private int creditH;
-    private ArrayList<Course> preRequisite;
-    private ArrayList<Course> coRequisite;
+    private Course[] preRequisite;
 
     // Constructor to add a course that has no pre or corequesites
     public Course(String code){
@@ -13,22 +14,31 @@ public class Course {
     }
 
     // Constructor to add a course with co and/or prerequisites
-    public Course(String code,int creditH, ArrayList<Course> preReq, ArrayList<Course> coReq ){
-        this.coRequisite = (coReq);
+    public Course(String code,int creditH, Course[] preReq ){
         this.creditH = creditH;this.code = code;this.preRequisite = preReq;
     }
-    public ArrayList<Course> getPreRequisite() {
+    public Course[] getPreRequisite() {
         return preRequisite;
     }
-    public ArrayList<Course> getCoRequisite() {
-        return coRequisite;
+
+    public void setTitle(String title) {
+        this.title = title;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
     @Override
     public boolean equals(Object obj) {
-        return (obj instanceof Course) && (((Course)obj).code).equals(this.code);
+        return (obj instanceof Course) ? (((Course)obj).code).equals(this.code) : false;
     }
     public String getCode() {
         return code; //comment
     }
 
+    public String toString() {
+        if (preRequisite != null) return code + "/" +  creditH + "/" + Arrays.toString(preRequisite);
+        return code;
+    }
 }
